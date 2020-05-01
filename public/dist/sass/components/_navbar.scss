@@ -2,7 +2,7 @@
 
 .navbar {
   @include flexBox('row', 'wrap', 'center', 'space-between');
-  width: 100vw;
+  width: 100%;
   position: fixed;
   height: auto;
   padding: 0 2rem;
