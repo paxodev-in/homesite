@@ -1,5 +1,22 @@
 /* Contains code for reset and global colors */
 
+/* Font family */
+$font-family: (
+  'primary': 'Open Sans',
+  'secondary': 'Roboto',
+  'default': 'Verdana',
+);
+
+/* Colors */
+$primary-color: #0f2862;
+$secondary-color: #9e363a;
+$accent-color: #091f36;
+$auxiliary-color: #4f5f76;
+
+/* Properties */
+$max-width: 1400px;
+
+/* Reset the default styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +26,13 @@
 html,
 body,
 #root {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   display: flex;
+  font-family: map-get($font-family, 'primary');
+  font-size: 1rem;
+  background-color: $secondary-color;
 }
 
 *,
@@ -20,14 +41,14 @@ body,
   box-sizing: inherit;
 }
 
-/* Always main section takes maximum area */
+a,
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
 
+/* Always main section takes maximum area */
 main {
   flex: 1 0 auto;
 }
-
-/* Colors */
-$primary-color: #0f2862;
-$secondary-color: #9e363a;
-$accent-color: #091f36;
-$auxiliary-color: #4f5f76;

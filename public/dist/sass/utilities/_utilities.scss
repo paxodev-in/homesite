@@ -1,0 +1,19 @@
+/* CLasses for background colors */
+
+.bg {
+  &-primary {
+    background-color: $primary-color;
+  }
+  &-secondary {
+    background-color: $secondary-color;
+  }
+}
+
+/* Set text color based on background color */
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

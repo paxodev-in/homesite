@@ -1,1 +1,29 @@
 /* Styling for navbar */
+
+.navbar {
+  @include flexBox('row', 'wrap', 'center', 'space-between');
+  width: 100vw;
+  position: fixed;
+  height: auto;
+  padding: 0 2rem;
+  color: set-text-color($primary-color);
+
+  &-brand {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: white;
+  }
+
+  &-links-items {
+    @include flexBox('row', 'nowrap', 'flex-end', 'space-between');
+
+    & > li {
+      padding: 2rem 1rem;
+      list-style-type: none;
+    }
+    & > li:hover {
+      border-bottom: 2px solid #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
